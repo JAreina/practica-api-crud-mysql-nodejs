@@ -1,0 +1,11 @@
+{
+  "name": "api-crud-mysql",
+  "version": "1.0.0",
+  "description": "CONEXIÓN CON EXPRESS A MYSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JAreina",
+  "license": "MIT"
+}
