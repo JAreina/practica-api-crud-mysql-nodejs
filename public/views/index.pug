@@ -1,0 +1,30 @@
+extends layout.pug
+//- herada el formato de layout el index
+
+block content
+	section.container
+		h1.header= titulo
+		img(src="nasa.jpg")
+		article.item
+			div
+				a.button.add(href="/agregar") AGREGAR
+			if(data.length)
+				table.table
+					tr
+						th Número
+						th Nombre
+						th Correo
+						th Ciudad
+					each d in data
+						tr
+							td #{d.id}
+							td #{d.nombre}
+							td #{d.correo}
+							td #{d.ciudad}
+							td
+								a.button.edit(href="/editar"+d.id) EDITAR
+							td
+								form(method="post/", action="/eliminar/" + d.id)
+									input.button.delete(type="submit", value="Eliminar")
+			else
+				div.error NO HAY DATOS

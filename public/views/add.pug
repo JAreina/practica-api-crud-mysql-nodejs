@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	section.container
+		h1.header=title
+		article.item
+			form.form(method="post", action="/")
+				fieldset
+					div
+						input(type="text", name="nombre", placeholder="nombre", required)
+					div
+						input(type="text", name="password", placeholder="password", required)
+					div
+						input(type="text", name="correo", placeholder="correo", required)
+					div
+						input(type="text", name="ciudad", placeholder="ciudad", required)
+					div
+						input.button.add(type="submit", value="Agregar")
+		a.button.show(href="/") Inicio
