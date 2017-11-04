@@ -22,9 +22,9 @@ block content
 							td #{d.correo}
 							td #{d.ciudad}
 							td
-								a.button.edit(href="/editar"+d.id) EDITAR
+								a.button.edit(href="/editar/"+d.id) EDITAR
 							td
-								form(method="post/", action="/eliminar/" + d.id)
+								form(method="post", action="/eliminar/" + d.id)
 									input.button.delete(type="submit", value="Eliminar")
 			else
 				div.error NO HAY DATOS
